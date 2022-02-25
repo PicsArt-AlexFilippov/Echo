@@ -90,6 +90,33 @@ float2 opticalFlow(texture2d_array<half, access::read> texture, uint2 uv, uint p
     return float2(flow);
 }
 
+#define deg2rad (M_PI_F / 180.0)
+
+kernel void kernelShader(texture2d<half, access::sample> inTexture [[texture(0)]],
+                         texture2d<half, access::write> outTexture [[texture(1)]],
+                         uint2 gid [[thread_position_in_grid]],
+                         device const int *rotationAngle [[buffer(0)]])
+{
+    constexpr sampler sampler(coord::normalized, address::mirrored_repeat, filter::linear);
+
+    float2 res = float2(inTexture.get_width(), inTexture.get_height());
+    float2 uv = float2(gid) / res;
+    
+    half4 inColor = inTexture.sample(sampler, uv);
+    
+    float theta = rotationAngle[0] * deg2rad;
+    float2 offset = float2(0.0, 0.0);
+    if(rotationAngle[0] == 90) {
+        offset.x = outTexture.get_width();
+    } else {
+        offset.y = outTexture.get_height();
+    }
+    
+    const float2x2 rotationMatrix = { float2( cos( theta ), -sin( theta ) ), float2( sin( theta ), cos( theta ) ) };
+    float2 rotatedUV = float2( float( gid.x ), float( gid.y ) ) * rotationMatrix;
+    outTexture.write( inColor, uint2( rotatedUV.x + offset.x, rotatedUV.y + offset.y) );
+}
+
 
 
 kernel void motionField(texture2d_array<half, access::read> inTexture [[texture(0)]],

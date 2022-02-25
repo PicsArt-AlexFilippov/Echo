@@ -5,6 +5,9 @@
 //  Created by Филиппов Алексей on 25.02.2022.
 //
 
+import MetalKit
+
 public protocol EchoRendererFactory: AnyObject {
-    func makeRenderer(directionMap: [Direction: URL]) -> EchoRenderer
+    func makeRenderer(metalDevice: MTLDevice,
+                      directionMap: [Direction: URL]) -> EchoRenderer?
 }

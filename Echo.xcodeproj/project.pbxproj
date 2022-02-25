@@ -13,6 +13,13 @@
 		B20FB1A727C8A7D900926FA8 /* FiltersCacheSizes.h in Headers */ = {isa = PBXBuildFile; fileRef = B20FB1A427C8A7CC00926FA8 /* FiltersCacheSizes.h */; };
 		B20FB1AA27C8A99B00926FA8 /* Structures.metal in Sources */ = {isa = PBXBuildFile; fileRef = B20FB1A927C8A99B00926FA8 /* Structures.metal */; };
 		B20FB1AC27C8B04600926FA8 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20FB1AB27C8B04600926FA8 /* Filter.swift */; };
+		B20FB1B027C8C37700926FA8 /* UIImage+TintColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20FB1AF27C8C37700926FA8 /* UIImage+TintColor.swift */; };
+		B20FB1B327C8CA1D00926FA8 /* MTLTexture+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20FB1B227C8CA1D00926FA8 /* MTLTexture+Utils.swift */; };
+		B2236D0A27C912CF00349E6C /* TextureDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2236D0927C912CF00349E6C /* TextureDetails.swift */; };
+		B2236D0D27C91A4600349E6C /* MaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2236D0C27C91A4600349E6C /* MaskType.swift */; };
+		B2236D0F27C91AA000349E6C /* MaskInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2236D0E27C91AA000349E6C /* MaskInfo.swift */; };
+		B2236D1227C91E0F00349E6C /* Segmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2236D1127C91E0F00349E6C /* Segmentation.swift */; };
+		B2236D1527C91F5300349E6C /* VideoSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2236D1427C91F5300349E6C /* VideoSource.swift */; };
 		B22630B027C7971A009F1677 /* Echo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22630A727C79719009F1677 /* Echo.framework */; };
 		B22630B527C7971A009F1677 /* EchoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22630B427C7971A009F1677 /* EchoTests.swift */; };
 		B22630B627C7971A009F1677 /* Echo.h in Headers */ = {isa = PBXBuildFile; fileRef = B22630AA27C79719009F1677 /* Echo.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,6 +48,13 @@
 		B20FB1A527C8A7D400926FA8 /* TextureBindingIndexes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureBindingIndexes.h; sourceTree = "<group>"; };
 		B20FB1A927C8A99B00926FA8 /* Structures.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Structures.metal; sourceTree = "<group>"; };
 		B20FB1AB27C8B04600926FA8 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		B20FB1AF27C8C37700926FA8 /* UIImage+TintColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TintColor.swift"; sourceTree = "<group>"; };
+		B20FB1B227C8CA1D00926FA8 /* MTLTexture+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MTLTexture+Utils.swift"; sourceTree = "<group>"; };
+		B2236D0927C912CF00349E6C /* TextureDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureDetails.swift; sourceTree = "<group>"; };
+		B2236D0C27C91A4600349E6C /* MaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskType.swift; sourceTree = "<group>"; };
+		B2236D0E27C91AA000349E6C /* MaskInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskInfo.swift; sourceTree = "<group>"; };
+		B2236D1127C91E0F00349E6C /* Segmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segmentation.swift; sourceTree = "<group>"; };
+		B2236D1427C91F5300349E6C /* VideoSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSource.swift; sourceTree = "<group>"; };
 		B22630A727C79719009F1677 /* Echo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Echo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22630AA27C79719009F1677 /* Echo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Echo.h; sourceTree = "<group>"; };
 		B22630AF27C7971A009F1677 /* EchoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EchoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +107,64 @@
 			path = Echo;
 			sourceTree = "<group>";
 		};
+		B20FB1AD27C8C34E00926FA8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B20FB1B127C8CA0800926FA8 /* MTLTexture */,
+				B20FB1AE27C8C35C00926FA8 /* UIImage */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B20FB1AE27C8C35C00926FA8 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				B20FB1AF27C8C37700926FA8 /* UIImage+TintColor.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		B20FB1B127C8CA0800926FA8 /* MTLTexture */ = {
+			isa = PBXGroup;
+			children = (
+				B20FB1B227C8CA1D00926FA8 /* MTLTexture+Utils.swift */,
+			);
+			path = MTLTexture;
+			sourceTree = "<group>";
+		};
+		B2236D0827C912BB00349E6C /* TextureDetails */ = {
+			isa = PBXGroup;
+			children = (
+				B2236D0927C912CF00349E6C /* TextureDetails.swift */,
+			);
+			path = TextureDetails;
+			sourceTree = "<group>";
+		};
+		B2236D0B27C91A3000349E6C /* Masks */ = {
+			isa = PBXGroup;
+			children = (
+				B2236D0C27C91A4600349E6C /* MaskType.swift */,
+				B2236D0E27C91AA000349E6C /* MaskInfo.swift */,
+			);
+			path = Masks;
+			sourceTree = "<group>";
+		};
+		B2236D1027C91E0100349E6C /* Segmentation */ = {
+			isa = PBXGroup;
+			children = (
+				B2236D1127C91E0F00349E6C /* Segmentation.swift */,
+			);
+			path = Segmentation;
+			sourceTree = "<group>";
+		};
+		B2236D1327C91F4400349E6C /* VideoSource */ = {
+			isa = PBXGroup;
+			children = (
+				B2236D1427C91F5300349E6C /* VideoSource.swift */,
+			);
+			path = VideoSource;
+			sourceTree = "<group>";
+		};
 		B226309D27C79719009F1677 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +186,7 @@
 		B22630A927C79719009F1677 /* Echo */ = {
 			isa = PBXGroup;
 			children = (
+				B20FB1AD27C8C34E00926FA8 /* Extensions */,
 				B22630BF27C7973D009F1677 /* BusinessLogic */,
 				B22630AA27C79719009F1677 /* Echo.h */,
 			);
@@ -150,6 +223,10 @@
 		B22630C527C89DF5009F1677 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B2236D1327C91F4400349E6C /* VideoSource */,
+				B2236D1027C91E0100349E6C /* Segmentation */,
+				B2236D0B27C91A3000349E6C /* Masks */,
+				B2236D0827C912BB00349E6C /* TextureDetails */,
 				B22630CE27C8A205009F1677 /* Direction */,
 				B22630CD27C8A1FC009F1677 /* Filter */,
 			);
@@ -294,15 +371,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2236D0D27C91A4600349E6C /* MaskType.swift in Sources */,
 				B20FB1AA27C8A99B00926FA8 /* Structures.metal in Sources */,
 				B20FB19D27C8A67400926FA8 /* EchoFilter.metal in Sources */,
 				B22630C727C8A0BD009F1677 /* EchoFilter.swift in Sources */,
+				B2236D1527C91F5300349E6C /* VideoSource.swift in Sources */,
 				B22630CC27C8A111009F1677 /* EchoRendererFactoryImpl.swift in Sources */,
 				B22630C327C89DEF009F1677 /* EchoRenderer.swift in Sources */,
 				B22630CB27C8A111009F1677 /* EchoRendererFactory.swift in Sources */,
+				B20FB1B327C8CA1D00926FA8 /* MTLTexture+Utils.swift in Sources */,
+				B20FB1B027C8C37700926FA8 /* UIImage+TintColor.swift in Sources */,
 				B22630C427C89DEF009F1677 /* EchoRendererImpl.swift in Sources */,
+				B2236D1227C91E0F00349E6C /* Segmentation.swift in Sources */,
 				B20FB1AC27C8B04600926FA8 /* Filter.swift in Sources */,
+				B2236D0A27C912CF00349E6C /* TextureDetails.swift in Sources */,
 				B22630D027C8A22F009F1677 /* Direction.swift in Sources */,
+				B2236D0F27C91AA000349E6C /* MaskInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

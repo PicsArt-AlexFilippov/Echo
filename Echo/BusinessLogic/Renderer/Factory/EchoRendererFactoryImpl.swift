@@ -5,6 +5,8 @@
 //  Created by Филиппов Алексей on 25.02.2022.
 //
 
+import MetalKit
+
 public final class EchoRendererFactoryImpl: EchoRendererFactory {
     // MARK: - Dependencies
     
@@ -14,7 +16,9 @@ public final class EchoRendererFactoryImpl: EchoRendererFactory {
     }
     
     // MARK: - EchoRendererFactory
-    public func makeRenderer(directionMap: [Direction : URL]) -> EchoRenderer {
-        return EchoRendererImpl(directionMap: directionMap)
+    public func makeRenderer(metalDevice: MTLDevice,
+                             directionMap: [Direction : URL]) -> EchoRenderer? {
+        return EchoRendererImpl(metalDevice: metalDevice,
+                                directionMap: directionMap)
     }
 }
