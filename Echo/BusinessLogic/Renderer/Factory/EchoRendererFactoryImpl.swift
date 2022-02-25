@@ -7,6 +7,7 @@
 
 import MetalKit
 
+/// Implementation of echo renderer factory
 public final class EchoRendererFactoryImpl: EchoRendererFactory {
     // MARK: - Dependencies
     
